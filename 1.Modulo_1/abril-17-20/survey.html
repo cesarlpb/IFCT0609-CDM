@@ -1,0 +1,127 @@
+<!-- Esta versión pasa los tests de https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de satisfacción</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Comentar estilos si hace falta -->
+    <style>
+        body {
+            background-color:black;
+        }
+        h1, p, label {
+            color: white;
+        }
+        hr {
+            background-color: gray;
+            margin: 10px 0;
+        }
+    </style>
+    <!-- Comentar lo anterior si hace falta  -->
+</head>
+<body>
+    <!-- 
+    Historias de usuarios:
+
+    1. Debería tener un título de página en un elemento h1 con un id de title -->
+        
+    <h1 id="title">Encuesta de satisfacción para programadores</h1>
+
+    <!-- 2. Debería tener una breve explicación en un elemento p con un id de description -->
+
+    <p id="description">
+        Encuesta sobre la satisfacción y calidad de vida de los programadores en España.
+    </p>
+    <!-- 3. Debe tener un elemento de formulario con el id survey-form -->
+
+    <form id="survey-form">
+        <!-- 4. Dentro del elemento formulario, debe introducir su nombre en un input que tiene un id de "name" y un type "text". Es un campo requerido -> required -->
+        <label id="name-label" for="name">Introduce tu nombre:</label><br>
+        <input id="name" type="text" placeholder="Pepito Pérez" required>
+        <br><br>
+    
+    <!-- 5.Dentro del elemento formulario, debe introducir su dirección de correo electrónico -> email en un campo de entrada con el id "email". Este es un campo requerido -> required -->
+
+    <!-- 6. Si introduce una dirección de correo electrónico con un formato incorrecto, aparecerá un error de validación HTML5.-->
+    <label id="email-label" for="email">Introduce tu email:</label><br>
+    <input id="email" type="email" placeholder="email@dominio.com" required>
+    <br><br>
+    
+    <!-- 7. Dentro del formulario, puede introducir un número en un campo de entrada que tiene un id de "number"-->
+
+    <!-- 8. La entrada numérica no debería aceptar números distintos, ya sea impidiendo que los introduzcas o mostrando un error de validación HTML5 (dependiendo de tu navegador).-->
+
+    <!--9. Si introduces números fuera del rango de la entrada numérica, definido por los atributos min y max, aparecerá un error de validación HTML5. -->
+
+    <label id="number-label" for="number">Años de experiencia:</label><br>
+    <input id="number" type="number" min="0" max="200" placeholder="1">
+    <br><br>
+
+    <!-- 10. Para los campos de nombre, correo electrónico y número, puede ver los elementos de etiqueta correspondientes en el formulario, que describen el propósito de cada campo con los siguientes ids: id="name-label", id="email-label", y id="number-label".-->
+
+    <!-- 11. Para los campos de nombre, correo electrónico y número, puede ver un texto de placeholder (marcador o texto de muestra) de posición que ofrece una descripción o instrucciones para cada campo.-->
+
+    <!-- 12. Dentro del elemento formulario, debes tener un elemento de selección desplegable con un id de "dropdown" y al menos dos opciones para elegir.-->
+    
+    <hr>
+
+    <label id="dropdown-label" for="dropdown">¿Cuál es tu tecnología favorita para hacer páginas web?</label>
+    <br>
+    <select name="dropdown" id="dropdown">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js" selected>Javascript</option>
+        <option value="react">React</option>
+        <option value="vue">Vue</option>
+    </select>
+    <!-- 13. Dentro del elemento formulario, puedes seleccionar una opción de un grupo de al menos dos botones de radio que se agrupan utilizando el atributo name-->
+
+    <hr>
+
+    <label for="copilot">¿Usas Github Copilot?</label><br>
+    <input id="yes" type="radio" name="copilot" value="yes"> <label for="yes">Sí</label><br>
+    <input id="no" type="radio" name="copilot" value="no"> <label for="no">No</label>
+    <br><br>
+
+    <!-- 14. Dentro del elemento formulario, puedes seleccionar varios campos de una serie de casillas de verificación, cada una de las cuales debe tener un atributo value -> checkboxes -->
+
+    <hr>
+    <label for="tecnologias">¿Cuáles de las siguientes tecnologías has utilizado alguna vez?</label>
+
+    <input id="html-checkbox" type="checkbox" value="html"><label for="html-checkbox">HTML</label><br>
+    <input id="css-checkbox" type="checkbox" value="css"><label for="css-checkbox">CSS</label><br>
+    <input id="js-checkbox" type="checkbox" value="js"><label for="js-checkbox">JS</label><br>
+    <input id="sql-checkbox" type="checkbox" value="sql"><label for="sql-checkbox">SQL</label><br>
+    <input id="php-checkbox" type="checkbox" value="php"><label for="php-checkbox">PHP</label><br>
+
+    <!-- 15. Dentro del elemento formulario, se presenta un área de texto (textarea) para comentarios adicionales.-->
+
+    <hr>
+
+    <label for="comentarios">¿Tienes alguna sugerencia?</label><br><br>
+    <textarea name="comentarios" id="comentarios" cols="50" rows="7">
+        Introduce tus comentarios aquí...
+    </textarea>
+
+
+    <!-- 16. Dentro del elemento formulario, se le presenta un botón con id de "submit" para enviar todas las entradas-->
+    
+    <input type="submit" value="Enviar">
+
+    </form>
+
+    <!--
+    Cumpla las historias de usuario y pase todas las pruebas siguientes para completar este proyecto. Dale tu propio estilo personal.
+    
+    ¡Feliz programación!
+
+    Nota: Asegúrate de añadir <link rel="stylesheet" href="styles.css"> en tu HTML para enlazar tu hoja de estilos y aplicar tu CSS.
+
+    -->
+
+</body>
+</html>
