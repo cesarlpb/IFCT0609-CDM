@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        body{
+            padding: 10px;
+            margin: 0;
+        }
+        h1, p{ 
+            text-align: center;
+            color:white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #my-div{
+            position: absolute;
+            right: 0; 
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background-color: rgba(0,0,0,0.45);
+            z-index: -1;
+        }
+        #video {
+            position: fixed;
+            right: 0; 
+            bottom: 0;
+            width: 100vw;
+            /* Dejando la altura en auto encaja mejor el vídeo */
+            /* height: 100%; */ 
+            margin: 0;
+            padding: 0;
+            border: 0;
+            z-index: -2; /* importante */
+        }
+    </style>
+</head>
+<body>
+    <h1>Miaufolio😺</h1>
+    <p>Esta página va de gatos.</p>
+    <div id="my-div"></div>
+    <video id="video" poster="poster.jpg" playsinline autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        El reproductor no se pudo mostrar.
+    </video>
+</body>
+</html>
