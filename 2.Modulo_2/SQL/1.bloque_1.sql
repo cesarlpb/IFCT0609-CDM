@@ -13,6 +13,10 @@ SELECT MAX(saldo) FROM tblusuarios WHERE sexo = "M"; -- 500
 SELECT nombre, saldo, sexo FROM tblusuarios WHERE saldo = 500 AND sexo = 'M' -- JESSICA
 -- 3. Listar nombre y teléfono de los usuarios con teléfono NOKIA, BLACKBERRY o SONY
 SELECT nombre, telefono FROM tblusuarios WHERE marca = "NOKIA" OR marca = "BLACKBERRY" OR marca = "SONY";
+-- Usando IN:
+SELECT nombre, telefono 
+FROM tblusuarios 
+WHERE marca IN ("NOKIA", "BLACKBERRY", "SONY");
 -- Si queremos ver la marca:
 SELECT nombre, telefono, marca FROM tblusuarios WHERE marca = "NOKIA" OR marca = "BLACKBERRY" OR marca = "SONY";
 -- 4. Contar los usuarios sin saldo o inactivos
@@ -26,10 +30,20 @@ SELECT nombre, nivel FROM tblusuarios WHERE nivel < 4 AND nivel > 0; -- Seleccio
 -- Usando BETWEEN:
 SELECT nombre, nivel FROM tblusuarios WHERE nivel BETWEEN 1 AND 3; -- incluye los números extremos del intervalo
 -- 6. Listar los números de teléfono con saldo menor o igual a 300
-SELECT nombre, telefono FROM `tblusuarios` WHERE saldo <= 300;
--- Calcular la suma de los saldos de los usuarios de la compañia telefónica NEXTEL
--- Contar el número de usuarios por compañía telefónica
--- Contar el número de usuarios por nivel
--- Listar el login de los usuarios con nivel 2
--- Mostrar el email de los usuarios que usan gmail
--- Listar nombre y teléfono de los usuarios con teléfono LG, SAMSUNG o MOTOROLA
+SELECT nombre, telefono FROM tblusuarios WHERE saldo <= 300;
+-- 7. Calcular la suma de los saldos de los usuarios de la compañia telefónica NEXTEL
+SELECT SUM(saldo) FROM tblusuarios WHERE compañia = "NEXTEL";
+-- 8. Contar el número de usuarios por compañía telefónica
+-- Agrupamos por compañia:
+SELECT compañia, COUNT(*) FROM `tblusuarios` GROUP BY compañia;
+-- Agrupando por marca:
+SELECT compañia, COUNT(*) FROM `tblusuarios` GROUP BY marca;
+-- 9. Contar el número de usuarios por nivel
+SELECT nivel, COUNT(*) FROM `tblusuarios` GROUP BY nivel;
+-- 10. Listar el login de los usuarios con nivel 2
+SELECT nombre, email FROM `tblusuarios` WHERE nivel = 2;
+-- 11. Mostrar el email de los usuarios que usan gmail
+SELECT email FROM `tblusuarios` WHERE email LIKE "%@gmail.com%"; -- Buscamos cualquier_string@gmail.com <> % representa cualquier substring
+-- Nota: el segundo % es para permitir caracteres al final, como espacios en blanco
+-- 12. Listar nombre y teléfono de los usuarios con teléfono LG, SAMSUNG o MOTOROLA
+SELECT nombre, telefono FROM tblusuarios WHERE marca IN ("LG", "SAMSUNG", "MOTOROLA");
