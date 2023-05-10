@@ -7,7 +7,7 @@ $db_password = "";
 $db_name = "pruebas";
 
 // Crear conexión
-$conn = msqli_connect($db_host, $db_user, $db_password, $db_name);
+$conn = mysqli_connect($db_host, $db_user, $db_password, $db_name);
 
 // Comprobar si hay errores
 if(!$conn){
