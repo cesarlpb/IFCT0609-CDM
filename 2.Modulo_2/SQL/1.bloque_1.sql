@@ -17,6 +17,8 @@ SELECT nombre, telefono FROM tblusuarios WHERE marca = "NOKIA" OR marca = "BLACK
 SELECT nombre, telefono, marca FROM tblusuarios WHERE marca = "NOKIA" OR marca = "BLACKBERRY" OR marca = "SONY";
 -- 4. Contar los usuarios sin saldo o inactivos
 SELECT idx, nombre, saldo, activo FROM tblusuarios WHERE saldo = 0 OR activo = FALSE; -- vemos que salen usuarios con saldo 0 o activo como 0 (FALSE)
+-- Usando COUNT()
+SELECT COUNT(*) FROM tblusuarios WHERE saldo = 0 OR activo = FALSE; -- contamos los resultados
 -- Como activo es un BOOLEAN pero en realidad se guarda como 0 o 1, también podemos usar NOT:
 SELECT idx, nombre, saldo, activo FROM tblusuarios WHERE saldo = 0 OR NOT activo;
 -- 5. Listar el login de los usuarios con nivel 1, 2 o 3
