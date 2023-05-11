@@ -9,6 +9,7 @@ bicicleta       -> el casco
 
 let medioTransporte = prompt("Elige el medio de transporte:\ncoche\nbicicleta\ntren\nautobús")
 let opciones = ["tren", "autobús", "autobus"]
+medioTransporte = medioTransporte.toLowerCase() // pasando a minúsculas el dato del usuario, así nos ahorramos colocar la transformación a lowerCase en los if...
 if(opciones.includes(medioTransporte)){
     alert("Recuerda llevar dinero para el billete")
 }else if(medioTransporte == "coche"){
