@@ -26,3 +26,4 @@ switch(true){
         salas = "ninguna sala :("
 }
 alert("Puedes ingresar a " + salas)
+// Más info: https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
