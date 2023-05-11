@@ -9,17 +9,17 @@ En una sala de juegos existen tre salas: Consolas, Juegos 2D, Juegos 3D, Realida
 
 let saldo = parseInt(prompt("Introduce tu saldo:"))
 let salas = "" // string
-switch(saldo){
-    case 1:
+switch(true){
+    case saldo == 1:
         salas = "Consolas"
         break;
-    case 2:
+    case saldo == 2:
         salas = "Consolas, Juegos 2D"
         break;
-    case 3:
+    case saldo == 3:
         salas = "Consolas, Juegos 2D, Juegos 3D"
         break;
-    case 4:
+    case saldo >= 4:
         salas = "Consolas, Juegos 2D, Juegos 3D, Realidad Virtual"
         break;
     default:
