@@ -9,7 +9,7 @@ Las estaciones serán
 
 */
 
-// TODO: rehacer con if-else, y/o con arrays
+// TODO: rehacer con if-else, y/o con arrays. El ternario quedaría un poco largo...
 
 let mes = parseInt(prompt("Indica el mes con un número del 1 al 12:"))
 switch(mes){
