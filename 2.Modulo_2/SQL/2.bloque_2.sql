@@ -22,9 +22,13 @@ SELECT email, telefono, compañia FROM `tblusuarios` WHERE compañia != "TELCEL"
 
 -- 4. Calcular el saldo promedio de los usuarios que tienen teléfono marca NOKIA
 
+SELECT AVG(saldo)
+FROM tblusuarios
+WHERE marca = "NOKIA";
+-- COUNT(), SUM(), AVG() devuelven un número
+-- Se aplican en columnas numéricas
 
-
--- Listar el login y teléfono de los usuarios con compañia telefónica IUSACELL o AXEL
+-- 5. Listar el login y teléfono de los usuarios con compañia telefónica IUSACELL o AXEL
 -- Mostrar el email de los usuarios que no usan yahoo
 -- Listar el login y teléfono de los usuarios con compañia telefónica que no sea TELCEL o IUSACELL
 -- Listar el login y teléfono de los usuarios con compañia telefónica UNEFON
