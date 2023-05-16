@@ -8,12 +8,22 @@ WHERE marca NOT IN ("LG", "SAMSUNG");
 --SELECT nombre, telefono, marca FROM `tblusuarios` WHERE NOT marca = "LG" AND NOT marca = "SAMSUNG";
 
 -- SELECT nombre, telefono, marca FROM `tblusuarios` WHERE marca != "LG" AND marca != "SAMSUNG";
+
 -- 2. Listar el login y teléfono de los usuarios con compañia telefónica IUSACELL
 SELECT email, telefono, compañia FROM `tblusuarios` WHERE compañia IN ("IUSACELL");
 
 -- SELECT email, telefono, compañia FROM `tblusuarios` WHERE compañia = "IUSACELL";
--- Listar el login y teléfono de los usuarios con compañia telefónica que no sea TELCEL
--- Calcular el saldo promedio de los usuarios que tienen teléfono marca NOKIA
+
+-- 3. Listar el login y teléfono de los usuarios con compañia telefónica que no sea TELCEL
+
+-- SELECT email, telefono, compañia FROM `tblusuarios` WHERE compañia NOT IN ("TELCEL");
+
+SELECT email, telefono, compañia FROM `tblusuarios` WHERE compañia != "TELCEL";
+
+-- 4. Calcular el saldo promedio de los usuarios que tienen teléfono marca NOKIA
+
+
+
 -- Listar el login y teléfono de los usuarios con compañia telefónica IUSACELL o AXEL
 -- Mostrar el email de los usuarios que no usan yahoo
 -- Listar el login y teléfono de los usuarios con compañia telefónica que no sea TELCEL o IUSACELL
