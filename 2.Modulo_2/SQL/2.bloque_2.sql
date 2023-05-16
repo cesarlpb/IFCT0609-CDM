@@ -73,3 +73,7 @@ FROM tblusuarios
 WHERE nivel IN (0,2);
 
 -- 12. Calcular el saldo promedio de los usuarios que tienen teléfono marca LG
+
+SELECT AVG(saldo)
+FROM tblusuarios
+WHERE marca = "LG";
