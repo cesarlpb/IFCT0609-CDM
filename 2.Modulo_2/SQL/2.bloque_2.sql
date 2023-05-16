@@ -36,7 +36,9 @@ WHERE compañia IN ("IUSACELL", "AXEL");
 
 -- 6. Mostrar el email de los usuarios que no usan yahoo
 
-
+SELECT email
+FROM tblusuarios
+WHERE email NOT LIKE "%@yahoo.%";
 
 -- Listar el login y teléfono de los usuarios con compañia telefónica que no sea TELCEL o IUSACELL
 -- Listar el login y teléfono de los usuarios con compañia telefónica UNEFON
