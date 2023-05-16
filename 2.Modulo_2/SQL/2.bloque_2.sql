@@ -40,9 +40,28 @@ SELECT email
 FROM tblusuarios
 WHERE email NOT LIKE "%@yahoo.%";
 
--- Listar el login y teléfono de los usuarios con compañia telefónica que no sea TELCEL o IUSACELL
--- Listar el login y teléfono de los usuarios con compañia telefónica UNEFON
--- Listar las diferentes marcas de celular en orden alfabético descendentemente
--- Listar las diferentes compañias en orden alfabético aleatorio
--- Listar el login de los usuarios con nivel 0 o 2
--- Calcular el saldo promedio de los usuarios que tienen teléfono marca LG
+-- 7. Listar el login y teléfono de los usuarios con compañia telefónica que no sea TELCEL o IUSACELL
+
+SELECT email, telefono, compañia
+FROM tblusuarios
+WHERE compañia NOT IN ("TELCEL", "IUSACELL");
+
+-- 8. Listar el login y teléfono de los usuarios con compañia telefónica UNEFON
+
+SELECT email, telefono, compañia
+FROM tblusuarios
+WHERE compañia IN ("UNEFON");
+
+-- 9. Listar las diferentes marcas de celular en orden alfabético descendentemente
+
+
+
+-- 10. Listar las diferentes compañias en orden alfabético aleatorio
+
+
+
+-- 11. Listar el login de los usuarios con nivel 0 o 2
+
+
+
+-- 12. Calcular el saldo promedio de los usuarios que tienen teléfono marca LG
