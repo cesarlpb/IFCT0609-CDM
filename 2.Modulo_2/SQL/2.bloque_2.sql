@@ -62,7 +62,9 @@ ORDER BY marca ASC;
 
 -- 10. Listar las diferentes compañias en orden alfabético aleatorio
 
-
+SELECT DISTINCT compañia 
+FROM tblusuarios
+ORDER BY RAND();
 
 -- 11. Listar el login de los usuarios con nivel 0 o 2
 
