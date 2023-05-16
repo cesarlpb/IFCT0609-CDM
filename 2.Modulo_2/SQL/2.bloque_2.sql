@@ -54,7 +54,11 @@ WHERE compañia IN ("UNEFON");
 
 -- 9. Listar las diferentes marcas de celular en orden alfabético descendentemente
 
-
+SELECT DISTINCT marca
+FROM tblusuarios
+ORDER BY marca ASC; 
+-- por defecto es ascendente, orden alfabético, si queremos orden inverso, DESC
+-- Se puede ordenar por cualquier campo en la tabla y no tiene que aparecer en el resultado del query
 
 -- 10. Listar las diferentes compañias en orden alfabético aleatorio
 
