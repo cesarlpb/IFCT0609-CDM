@@ -68,6 +68,8 @@ ORDER BY RAND();
 
 -- 11. Listar el login de los usuarios con nivel 0 o 2
 
-
+SELECT email, nivel 
+FROM tblusuarios
+WHERE nivel IN (0,2);
 
 -- 12. Calcular el saldo promedio de los usuarios que tienen teléfono marca LG
