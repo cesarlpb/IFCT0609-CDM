@@ -8,5 +8,24 @@
 </head>
 <body>
     <!-- Login con JS -->
+    <p>Top secret</p>
+    <form>
+        <label>Usuario:</label><br>
+        <input type="text" id="usuario"><br>
+        <label>Contraseña</label><br>
+        <input type="password" id="password"><br>
+        <input type="submit">
+    </form>
+    <script>
+        // Ejemplo de login con JS (no hagáis esto (en serio)):
+        let usuario = prompt("Usuario:")
+        let contraseña = prompt("Contraseña")
+        if(usuario == "pepito" && contraseña == "Supersafe"){
+            alert("Logeado!")
+        }else{
+            alert("No puedes pasar :(")
+        }
+        console.log("Hola")
+    </script>
 </body>
 </html>
