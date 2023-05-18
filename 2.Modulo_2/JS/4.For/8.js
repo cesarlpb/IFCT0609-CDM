@@ -16,6 +16,7 @@ Le tecleamos el valor 5. El resultado será:
 let num = parseInt(prompt("Introduce un número:"))
 console.log("Método 1:")
 // Método 1: sin doble bucle for
+// Observación: si ponemos que let i=1 el primer espacio en blanco no lo escribes
 for(let i=0; i<=num; i++){
     console.log("*".repeat(i))
 }
