@@ -23,7 +23,8 @@ let esPrimo = true // Al iniciar el boolean así, nos ahorramos el siguiente if
 // }
 
 let divisor = 2
-while(!esPrimo && divisor < num){
+let mitad = parseInt(num / 2)
+while(!esPrimo && divisor < mitad){
   esPrimo = num % divisor != 0
   divisor++
 }
