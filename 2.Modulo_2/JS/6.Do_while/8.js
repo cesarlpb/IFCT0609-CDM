@@ -14,3 +14,18 @@ if(num > 0){
   }while(contador <= num)
 }
 alert("Suma: " + suma)
+
+// Método de la página:
+/*
+let numero, suma2;
+do{
+    suma2 = 0;
+    numero = parseInt(prompt("Teclear un número"));
+    contar = numero;
+    do{
+        suma2 += (numero%2==0)? numero:0;
+        numero--;
+  	     }while (numero >0);
+console.log(suma2) // Añadimos salida de la suma
+}while (contar > 0)
+*/
