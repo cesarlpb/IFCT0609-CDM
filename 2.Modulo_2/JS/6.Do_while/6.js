@@ -19,19 +19,19 @@ En este script se trata de calcular el máximo común divisor (MCD) de dos núme
   Si tecleo 20 y 8 el mcd es 4.
 */
 
-let num1 = parseInt(prompt("Introduce el primer número:"))
-let num2 = parseInt(prompt("Introduce el segundo número:"))
-const NUM1 = num1 
-const NUM2 = num2
+const NUM1 = parseInt(prompt("Introduce el primer número:"))
+const NUM2 = parseInt(prompt("Introduce el segundo número:"))
+// Reasignamos valores por claridad
+let [dividendo, divisor] = [NUM1, NUM2]
 let MCD = 1, resto = 0
 do{
-  resto = num1 % num2
+  resto = dividendo % divisor
   if(resto == 0){
-    MCD = num2
+    MCD = divisor
   }else{
     // "Desechamos num1" pasando valor de num2 a num1 y nos quedamos con el resto en num2
-    num1 = num2
-    num2 = resto
+    dividendo = divisor;
+    divisor = resto;
   }
 }while(resto != 0)
 // NUM1 y NUM2 son los valores originales que el usuario introduce
