@@ -36,3 +36,7 @@ do{
 }while(resto != 0)
 // NUM1 y NUM2 son los valores originales que el usuario introduce
 alert(`MCD(${NUM1}, ${NUM2}) = ${MCD}`)
+
+// TODO: Calcular el mcm
+// num1 * num2 = MCD(num1, num2) * mcm(num1, num2)
+// Más info: https://www.geeksforgeeks.org/mathematical-algorithms/mathematical-algorithms-gcd-lcm/
