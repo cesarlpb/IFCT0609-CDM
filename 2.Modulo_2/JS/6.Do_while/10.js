@@ -18,3 +18,21 @@ if(isNaN(parseInt(string))){
   }while(indice >= 0)
   alert(`${string} es palíndromo? ${string == newString}`)
 }
+
+// Método 2 con console.log() para ver los datos:
+let numero, inverso=0, copia, resto;
+numero = parseInt(prompt("teclear el numero"));
+copia = numero;
+do {    
+  resto = copia%10;    
+  inverso = inverso*10 + resto;
+  // variables:
+  console.log(resto, inverso, copia)
+  copia = parseInt(copia/10); 
+  // se actualiza copia y converge a 1
+  console.log(copia)
+} while(copia != 0); 
+if (inverso == numero)
+    alert(numero+" es palindromo ");
+else
+    alert(numero+" no es palindromo ");
