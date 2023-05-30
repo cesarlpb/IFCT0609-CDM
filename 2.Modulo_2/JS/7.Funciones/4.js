@@ -12,3 +12,4 @@ Al ejecutar repetir('a', 5) deberá devover la caden  aaaaa.
 function repetir(char, repeticiones){
   return char.repeat(repeticiones)
 }
+// Se puede hacer con cualquier bucle for, while, do while...
