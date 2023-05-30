@@ -1,17 +1,14 @@
 /*
-Este script le pide al usuario que vaya tecleando números enteros positivos hasta que el usuario ingrese el 0. En esete caso el programa acaba mostrando el valor máximo y mínimo de los números tecleados.
-
-El usuario teclea la sere 4,2,3,5,0, El máximo es 5 y el minimo es 2. Si telcea 2,2,2,0, máximo es 2 y minimo es 2.
+Este script le pide al usuario que vaya tecleando números una y otra vez, pero solo números pares, en caso de que teclee un número impar el programa acabará y dirá la cantidad de números pares ingresados (el 0 cuenta como par).
+Muestra Si escribo 2,8,12,1 el script me dirá "Ha escrito 3 números pares")
 */
-
-let num = -Infinity
-let arr = []
-while(num != 0){
-  num = parseInt(prompt("Introduce un número positivo:"))
-  if(num > 0){
-    arr.push(num) // Añade el el número al array
+let pares = 0, impares = 0
+while(impares == 0){
+  let num = parseInt(prompt("Introduce un número:"))
+  if(num % 2 == 0){
+    pares++
+  }else{
+    impares++
   }
 }
-let min = Math.min(...arr)
-let max = Math.max(...arr)
-alert(`El mínimo es: ${min}\nEl máximo es: ${max}`)
+alert(pares)
