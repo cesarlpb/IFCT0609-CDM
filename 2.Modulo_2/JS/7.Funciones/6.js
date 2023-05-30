@@ -13,6 +13,14 @@ factorial(3) = 3*factorial(2)
              = 3*2*1 = 6
 */
 
+/**
+ * Calcula el factorial de un número entero. 
+ * Máximo: 170! 
+ * A partir de 171! sale Infinity
+ * @param {Number} a 
+ * @param {Number} b 
+ * @returns {Number} 
+ */
 function factorial(num){
   num = parseInt(num)
   if(num == 1 || num == 0){

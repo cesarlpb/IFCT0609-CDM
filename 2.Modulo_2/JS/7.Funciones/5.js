@@ -11,6 +11,12 @@ Asigna a B el resto
 Repite hasta que A o B sean 0.
 */
 
+/**
+ * Calcula el máximo común divisor (MCD) de dos números
+ * @param {Number} a 
+ * @param {Number} b 
+ * @returns {Number} MCD
+ */
 function MCD(a, b){
   if(a == 0){
     return b
