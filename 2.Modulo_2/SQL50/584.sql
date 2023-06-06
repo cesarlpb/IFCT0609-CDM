@@ -7,3 +7,7 @@ INSERT INTO Customer (id, name, referee_id) VALUES ('3', 'Alex', '2');
 INSERT INTO Customer (id, name, referee_id) VALUES ('4', 'Bill', 'None');
 INSERT INTO Customer (id, name, referee_id) VALUES ('5', 'Zack', '1');
 INSERT INTO Customer (id, name, referee_id) VALUES ('6', 'Mark', '2');
+
+-- Ejercicio: Query para escribir los nombres (name) de los Customer que no están referidos por el referee_id 2
+
+SELECT name FROM customer WHERE referee_id != 2;
