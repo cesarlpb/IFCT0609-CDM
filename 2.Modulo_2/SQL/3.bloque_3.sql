@@ -26,10 +26,30 @@ SELECT sexo, COUNT(*) FROM tblUsuarios GROUP BY sexo;
 -- Todos los hombres:
 SELECT nombre FROM tblUsuarios WHERE sexo = "H";
 
-/*Listar el login y teléfono de los usuarios con compañia telefónica AT&T
-Listar las diferentes compañias en orden alfabético descendentemente
-Listar el logn de los usuarios inactivos
-Listar los números de teléfono sin saldo
-Calcular el saldo mínimo de los usuarios de sexo “Hombre”
-Listar los números de teléfono con saldo mayor a 300
-*/
+-- 7. Listar el login y teléfono de los usuarios con compañia telefónica AT&T
+
+SELECT nombre, telefono FROM tblUsuarios WHERE compañia = "AT&T";
+
+-- 8. Listar las diferentes compañias en orden alfabético descendentemente
+
+SELECT DISTINCT compañia FROM tblUsuarios ORDER BY compañia DESC;
+
+-- 9. Listar el login de los usuarios inactivos
+
+SELECT nombre, email FROM tblUsuarios WHERE activo = 0;
+
+SELECT nombre, email FROM tblUsuarios WHERE NOT activo;
+
+-- 10. Listar los números de teléfono sin saldo
+
+SELECT telefono FROM tblUsuarios WHERE saldo = 0;
+
+-- 11. Calcular el saldo mínimo de los usuarios de sexo “Hombre”
+
+SELECT MIN(saldo) FROM tblUsuarios WHERE sexo = "H";
+
+SELECT COUNT(*) FROM tblUsuarios WHERE sexo = "H" AND saldo = 0;
+
+-- 12. Listar los números de teléfono con saldo mayor a 300
+
+SELECT telefono FROM tblUsuarios WHERE saldo > 300;
