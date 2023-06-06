@@ -10,9 +10,15 @@ SELECT SUM(saldo) FROM tblUsuarios WHERE compañia = "UNEFON";
 SELECT email FROM tblUsuarios WHERE email LIKE "%hotmail%";
 -- 6. Listar los nombres de los usuarios sin saldo o inactivos
 SELECT nombre FROM tblUsuarios WHERE saldo = 0 OR activo = 0;
--- Listar el login y teléfono de los usuarios con compañia telefónicaIUSACELL o TELCEL
--- Listar las diferentes marcas de celular en orden alfabético ascendentemente
--- Listar las diferentes marcas de celular en orden alfabético aleatorio
--- Listar el login y teléfono de los usuarios con compañia telefónica IUSACELL o UNEFON
--- Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca MOTOROLA o NOKIA
--- Calcular la suma de los saldos de los usuarios de la compañia telefónica TELCEL
+-- 7. Listar el login y teléfono de los usuarios con compañia telefónica IUSACELL o TELCEL
+SELECT nombre, email, telefono FROM tblUsuarios WHERE compañia IN ("IUSACELL", "TELCEL");
+-- 8. Listar las diferentes marcas de celular en orden alfabético ascendentemente
+SELECT DISTINCT marca FROM tblUsuarios ORDER BY marca ASC;
+-- 9. Listar las diferentes marcas de celular en orden alfabético aleatorio
+SELECT DISTINCT marca FROM tblUsuarios ORDER BY RAND();
+-- 10. Listar el login y teléfono de los usuarios con compañia telefónica IUSACELL o UNEFON
+SELECT nombre, email, telefono FROM tblUsuarios WHERE compañia IN ("IUSACELL", "UNEFON");
+-- 11. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca MOTOROLA o NOKIA
+SELECT nombre, telefono FROM tblUsuarios WHERE marca NOT IN ("MOTOROLA", "NOKIA");
+-- 12. Calcular la suma de los saldos de los usuarios de la compañia telefónica TELCEL
+SELECT SUM(saldo) FROM tblUsuarios WHERE compañia = "TELCEL";
