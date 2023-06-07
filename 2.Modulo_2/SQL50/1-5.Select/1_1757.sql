@@ -1,4 +1,4 @@
--- 1757 https://leetcode.com/problems/recyclable-and-low-fat-products/?envType=study-plan-v2&envId=top-sql-50
+-- 1757 https://leetcode.com/problems/recyclable-and-low-fat-products/
 -- Enunciado
 /*
 Escribe una consulta SQL para encontrar los ids de los productos que son a la vez bajos en grasa y reciclables.
