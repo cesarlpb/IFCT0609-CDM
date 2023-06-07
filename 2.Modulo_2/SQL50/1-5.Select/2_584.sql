@@ -20,6 +20,8 @@ INSERT INTO Customer (id, name, referee_id) VALUES ('6', 'Mark', '2');
 --------------
 
 -- Ejercicio: Query para escribir los nombres (name) de los Customer que no están referidos por el referee_id 2
-SELECT `name` FROM customer WHERE referee_id != 2;
+SELECT `name` FROM Customer WHERE referee_id != 2;
 -- Usando array:
-SELECT `name` FROM customer WHERE referee_id NOT IN (2);
+SELECT `name` FROM Customer WHERE referee_id NOT IN (2);
+-- LeetCode:
+SELECT `name` FROM Customer WHERE referee_id != 2 OR referee_id IS null;
