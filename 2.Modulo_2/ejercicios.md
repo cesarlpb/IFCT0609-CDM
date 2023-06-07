@@ -27,6 +27,7 @@
 ## SQL
 
 ### Teoría
+- [Joins en W3schools](https://www.w3schools.com/mysql/mysql_join.asp)
 - [JOINS](https://www.guru99.com/joins.html)
 
 ---
