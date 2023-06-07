@@ -29,3 +29,30 @@ function min(arr, param){
     return NaN
   }
 }
+
+// Opción 2 - diversión con bucles:
+function min2(arr, param){
+  let min = Infinity, indice = -Infinity
+  if(param == "v"){
+    for(let i = 0; i<arr.length; i++){
+      let num = arr[i]
+      if(num < min){
+        min = num 
+      }
+    }
+    return min
+  }
+  if(param == "i"){
+    for(let i = 0; i<arr.length; i++){
+      let num = arr[i]
+      if(num < min){
+        min = num 
+        indice = i
+      }
+    }
+    return indice
+  }
+  if(param != "v" || param != "i"){
+    return NaN
+  }
+}
