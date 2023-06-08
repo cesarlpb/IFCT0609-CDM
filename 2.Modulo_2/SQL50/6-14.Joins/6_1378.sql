@@ -23,4 +23,10 @@ INSERT INTO EmployeeUNI (id, unique_id) VALUES ('3', '1');
 INSERT INTO EmployeeUNI (id, unique_id) VALUES ('11', '2');
 INSERT INTO EmployeeUNI (id, unique_id) VALUES ('90', '3');
 
-SELECT * FROM employeeUNI;
+--------------
+-- SOLUCIÓN --
+--------------
+
+SELECT u.unique_id, e.name
+FROM Employees e
+LEFT JOIN EmployeeUNI u ON e.id=u.id;
