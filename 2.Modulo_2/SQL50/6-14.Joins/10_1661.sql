@@ -32,7 +32,7 @@ INSERT INTO Activity (machine_id, process_id, activity_type, timestamp) VALUES (
 -- SOLUCIÓN --
 --------------
 
-SELECT A.machine_id, TRUNCATE(SUM(B.timestamp - A.timestamp)/COUNT(*), 3) AS diff
+SELECT A.machine_id, ROUND(SUM(B.timestamp - A.timestamp)/COUNT(*), 3) AS processing_time
 FROM Activity A, Activity B
 WHERE 
   A.process_id = B.process_id 
