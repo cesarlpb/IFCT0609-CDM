@@ -20,3 +20,11 @@ TRUNCATE TABLE Product;
 INSERT INTO Product (product_id, product_name) VALUES ('100', 'Nokia');
 INSERT INTO Product (product_id, product_name) VALUES ('200', 'Apple');
 INSERT INTO Product (product_id, product_name) VALUES ('300', 'Samsung');
+
+--------------
+-- SOLUCIÓN --
+--------------
+
+SELECT p.product_name, s.year, s.price
+FROM Sales s
+LEFT JOIN Product p ON s.product_id=p.product_id;
