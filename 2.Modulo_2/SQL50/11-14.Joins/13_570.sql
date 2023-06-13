@@ -8,12 +8,18 @@ Devuelva la tabla de resultados en cualquier orden.
 
 El formato del resultado de la consulta está en el siguiente ejemplo.
 */
-CREATE TABLE IF NOT EXISTS Employee (id INT, name VARCHAR(255), department VARCHAR(255), managerId INT);
-TRUNCATE TABLE Employee;
-INSERT INTO Employee (id, name, department, managerId) VALUES ('101', 'John', 'A', NULL);
-INSERT INTO Employee (id, name, department, managerId) VALUES ('102', 'Dan', 'A', '101');
-INSERT INTO Employee (id, name, department, managerId) VALUES ('103', 'James', 'A', '101');
-INSERT INTO Employee (id, name, department, managerId) VALUES ('104', 'Amy', 'A', '101');
-INSERT INTO Employee (id, name, department, managerId) VALUES ('105', 'Anne', 'A', '101');
-INSERT INTO Employee (id, name, department, managerId) VALUES ('106', 'Ron', 'B', '101');
+
+-- Cambiamos nombre de tabla de Employee a Employee2 para que podamos ejecutar el query:
+CREATE TABLE IF NOT EXISTS Employee2 (id INT, name VARCHAR(255), department VARCHAR(255), managerId INT);
+TRUNCATE TABLE Employee2;
+INSERT INTO Employee2 (id, name, department, managerId) VALUES ('101', 'John', 'A', NULL);
+INSERT INTO Employee2 (id, name, department, managerId) VALUES ('102', 'Dan', 'A', '101');
+INSERT INTO Employee2 (id, name, department, managerId) VALUES ('103', 'James', 'A', '101');
+INSERT INTO Employee2 (id, name, department, managerId) VALUES ('104', 'Amy', 'A', '101');
+INSERT INTO Employee2 (id, name, department, managerId) VALUES ('105', 'Anne', 'A', '101');
+INSERT INTO Employee2 (id, name, department, managerId) VALUES ('106', 'Ron', 'B', '101');
+
+--------------
+-- SOLUCIÓN --
+--------------
 
