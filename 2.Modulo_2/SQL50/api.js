@@ -13,7 +13,7 @@ const con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "db" // <--- Colocad la base de datos que usáis
+  database: "leetcode" // <--- Colocad la base de datos que usáis
 });
 
 // Query a ejecutar
@@ -43,7 +43,8 @@ con.connect(function(err) {
         res.writeHead(200, {'Content-Type': `text/${param == "html" ? "html" : "plain"}; charset=utf-8`});
         let html = generarHTML(result)
         res.write(html);
-        res.end();
+        res.end()
+        console.log(`Response en formato:  ${param == "" ? "json" : param}`)
       });
     }
     else if (req.url.startsWith('/api') || param == "json") {
@@ -53,8 +54,10 @@ con.connect(function(err) {
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify(result));
         res.end();
+        console.log(`Response en formato:  ${param == "" ? "json" : param}`)
       });
     }
+    
   }).listen(8080, () => console.log('API endpoint: http://localhost:8080/api'));
 });
 
