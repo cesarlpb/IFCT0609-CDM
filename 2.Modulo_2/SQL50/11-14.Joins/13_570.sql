@@ -23,3 +23,30 @@ INSERT INTO Employee2 (id, name, department, managerId) VALUES ('106', 'Ron', 'B
 -- SOLUCIÓN --
 --------------
 
+SELECT Employee2.name AS manager 
+FROM Employee2 
+WHERE id IN ((SELECT  
+  E1.`managerId`
+FROM Employee2 E1, Employee2 E2
+WHERE E1.`managerId` = E2.`managerId` AND E1.department = E2.department AND E1.name = E2.name
+HAVING COUNT(E2.`managerId`) >= 5));
+
+-- Explicación --
+-- El resultado es el nombre del manager con id de usuario 101. Este query nos da ese resultado:
+SELECT Employee2.name AS manager 
+FROM Employee2 
+WHERE id IN (101);
+-- Este otro query nos da el id del manager que sale al menos 5 veces:
+SELECT  
+  E1.`managerId`
+FROM Employee2 E1, Employee2 E2
+WHERE E1.`managerId` = E2.`managerId` AND E1.department = E2.department AND E1.name = E2.name
+HAVING COUNT(E2.`managerId`) >= 5;
+-- Se pueden juntar ambos para pasarle un 101 al primer query usando el segundo:
+SELECT Employee2.name 
+FROM Employee2 
+WHERE `id` IN ((SELECT  
+  E1.`managerId`
+FROM Employee2 E1, Employee2 E2
+WHERE E1.`managerId` = E2.`managerId` AND E1.department = E2.department AND E1.name = E2.name
+HAVING COUNT(E2.`managerId`) >= 5)); -- colocamos el segundo query dentro de otros paréntesis para que se ejecute devolviendo una lista de resultados y como usamos IN podemos hacer match con cada resultado de la lista (array)
