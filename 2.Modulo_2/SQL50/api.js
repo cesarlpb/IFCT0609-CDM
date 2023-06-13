@@ -36,18 +36,18 @@ con.connect(function(err) {
     // Accede a los parámetros individualmente
     const param = queryParams?.format || "";
 
-    if (param == "html") {
+    if (req.url.startsWith('/api') && (param == "html" || param == "text")) {
       con.query(query, function (err, result) {
         if (err) throw err;
         
-        res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+        res.writeHead(200, {'Content-Type': `text/${param == "html" ? "html" : "plain"}; charset=utf-8`});
         let html = generarHTML(result)
         console.log(html)
         res.write(html);
         res.end();
       });
     }
-    else if (req.url.startsWith('/api')) {
+    else if (req.url.startsWith('/api') || param == "json") {
       con.query(query, function (err, result) {
         if (err) throw err;
         
