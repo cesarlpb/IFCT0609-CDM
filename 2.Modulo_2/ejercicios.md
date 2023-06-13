@@ -38,6 +38,10 @@
 8. [1581. Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | [Solución](./SQL50/6-10.Joins/8_1581.sql)
 9. [197. Rising Temperature](https://leetcode.com/problems/rising-temperature/) | [Solución](./SQL50/6-10.Joins/9_197.sql)
 10. [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/) | [Solución](./SQL50/6-10.Joins/10_1661.sql)
+11. [577. Employee Bonus](https://leetcode.com/problems/employee-bonus/) | [Solución](./SQL50/6-10.Joins/11_577.sql)
+12. [1280. Students and Examinations](https://leetcode.com/problems/students-and-examinations/) | [Solución](./SQL50/6-10.Joins/12_1280.sql)
+13. [570. Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/) | [Solución](./SQL50/6-10.Joins/13_570.sql)
+14. [1934. Confirmation Rate](https://leetcode.com/problems/confirmation-rate/) | [Solución](./SQL50/6-10.Joins/14_1934.sql)
 ### Bloque Basic Aggregate Functions
 
 ### Teoría
