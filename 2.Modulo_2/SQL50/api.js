@@ -1,7 +1,7 @@
 // Script de node para mostrar las salidas de los queries de SQL50
 // Cómo usar:
 // npm install en esta carpeta
-// Pegar el query en la variable query en la línea 20 y colocad la base de datos en la línea 16
+// Pegar el query en la variable query
 // node api.js
 // Abrir el navegador en localhost:8080/api
 
@@ -13,7 +13,7 @@ const con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "db" // <--- colocad la base de datos que usáis
+  database: "db" // <--- Colocad la base de datos que usáis
 });
 
 // Query a ejecutar
@@ -24,17 +24,19 @@ ON s.student_id = e.student_id AND Subjects.subject_name = e.subject_name
 GROUP BY s.student_id, s.student_name, Subjects.subject_name
 ORDER BY s.student_id, Subjects.subject_name;`;
 
-http.createServer(function (req, res) {
-  // Analiza la URL en busca de parámetros
-  const parsedUrl = url.parse(req.url, true);
-  const queryParams = parsedUrl.query;
-  // Accede a los parámetros individualmente
-  const param = queryParams?.format || "";
+// Conecta a la base de datos
+con.connect(function(err) {
+  if (err) throw err;
+  
+  // Crea el servidor HTTP
+  http.createServer(function (req, res) {
+    // Analiza la URL en busca de parámetros
+    const parsedUrl = url.parse(req.url, true);
+    const queryParams = parsedUrl.query;
+    // Accede a los parámetros individualmente
+    const param = queryParams?.format || "";
 
-  if (param == "html") {
-    con.connect(function(err) {
-      if (err) throw err;
-      
+    if (param == "html") {
       con.query(query, function (err, result) {
         if (err) throw err;
         
@@ -43,27 +45,19 @@ http.createServer(function (req, res) {
         console.log(html)
         res.write(html);
         res.end();
-
-        con.end(); // Cierra la conexión después de la respuesta
       });
-    });
-  }
-  else if (req.url.startsWith('/api')) {
-    con.connect(function(err) {
-      if (err) throw err;
-      
+    }
+    else if (req.url.startsWith('/api')) {
       con.query(query, function (err, result) {
         if (err) throw err;
         
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify(result));
         res.end();
-
-        con.end(); // Cierra la conexión después de la respuesta
       });
-    });
-  }
-}).listen(8080, () => console.log('API endpoint: http://localhost:8080/api'));
+    }
+  }).listen(8080, () => console.log('API endpoint: http://localhost:8080/api'));
+});
 
 function generarHTML(result){
   let html = '<table>';
