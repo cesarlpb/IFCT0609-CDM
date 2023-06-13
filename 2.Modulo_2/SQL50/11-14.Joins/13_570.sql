@@ -50,3 +50,9 @@ WHERE `id` IN ((SELECT
 FROM Employee2 E1, Employee2 E2
 WHERE E1.`managerId` = E2.`managerId` AND E1.department = E2.department AND E1.name = E2.name
 HAVING COUNT(E2.`managerId`) >= 5)); -- colocamos el segundo query dentro de otros paréntesis para que se ejecute devolviendo una lista de resultados y como usamos IN podemos hacer match con cada resultado de la lista (array)
+-- Alternativa:
+SELECT b.name FROM Employee e1
+JOIN (SELECT managerId FROM Employee 
+GROUP BY managerID 
+HAVING COUNT(*) >= 5) e2 
+ON e1.id=e2.managerID
