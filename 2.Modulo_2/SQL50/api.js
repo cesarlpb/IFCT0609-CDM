@@ -42,7 +42,6 @@ con.connect(function(err) {
         
         res.writeHead(200, {'Content-Type': `text/${param == "html" ? "html" : "plain"}; charset=utf-8`});
         let html = generarHTML(result)
-        console.log(html)
         res.write(html);
         res.end();
       });
