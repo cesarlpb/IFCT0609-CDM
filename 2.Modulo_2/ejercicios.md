@@ -25,6 +25,20 @@
 ## PHP
 
 ## SQL
+- En [SQL50](./SQL50/) resolvemos ejercicios de [Leetcode SQL50](https://leetcode.com/studyplan/top-sql-50/)
+### Bloque Select
+1. [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | [Solución](./SQL50/1-5.Select/1_1757.sql)
+2. [584. Find Customer Referee](https://leetcode.com/problems/find-customer-referee/) | [Solución](./SQL50/1-5.Select/2_584.sql)
+3. [595. Big Countries](https://leetcode.com/problems/big-countries/) | [Solución](./SQL50/1-5.Select/3_595.sql)
+4. [1148. Article Views I](https://leetcode.com/problems/article-views-i/) | [Solución](./SQL50/1-5.Select/4_1148.sql)
+5. [1683. Invalid Tweets](https://leetcode.com/problems/invalid-tweets/) | [Solución](./SQL50/1-5.Select/5_1683.sql)
+### Bloque Basic Joins
+6. [1378. Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | [Solución](./SQL50/6-10.Joins/6_1378.sql)
+7. [1068. Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) | [Solución](./SQL50/6-10.Joins/7_1068.sql)
+8. [1581. Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | [Solución](./SQL50/6-10.Joins/8_1581.sql)
+9. [197. Rising Temperature](https://leetcode.com/problems/rising-temperature/) | [Solución](./SQL50/6-10.Joins/9_197.sql)
+10. [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/) | [Solución](./SQL50/6-10.Joins/10_1661.sql)
+### Bloque Basic Aggregate Functions
 
 ### Teoría
 - [Joins en W3schools](https://www.w3schools.com/mysql/mysql_join.asp)
@@ -34,5 +48,3 @@
 
 - [Ejercicios de SQL](https://parzibyte.me/blog/2018/02/06/ejercicios-resueltos-consultas-sql-mysql/amp/)
 - [Teoría en W3Schools](https://www.w3schools.com/mysql/)
-
-- En [SQL50](./SQL50/) resolvemos ejercicios de [Leetcode SQL50](https://leetcode.com/studyplan/top-sql-50/)
