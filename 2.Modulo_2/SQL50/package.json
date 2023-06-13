@@ -1,0 +1,13 @@
+{
+  "name": "sql50",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "César P.",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
