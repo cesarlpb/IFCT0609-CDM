@@ -38,7 +38,7 @@ INSERT INTO Examinations (student_id, subject_name) VALUES ('1', 'Math');
 -- SOLUCIÓN --
 --------------
 
-SELECT s.student_id, s.student_name, COUNT(e.subject_name) AS attended_exams
+SELECT s.student_id, s.student_name, Subjects.subject_name, COUNT(e.subject_name) AS attended_exams
 FROM Students s CROSS JOIN Subjects 
 LEFT JOIN Examinations e
 ON s.student_id = e.student_id AND Subjects.subject_name = e.subject_name
