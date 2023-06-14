@@ -21,3 +21,8 @@ INSERT INTO UnitsSold (product_id, purchase_DATE, units) VALUES ('1', '2019-02-2
 INSERT INTO UnitsSold (product_id, purchase_DATE, units) VALUES ('1', '2019-03-01', '15');
 INSERT INTO UnitsSold (product_id, purchase_DATE, units) VALUES ('2', '2019-02-10', '200');
 INSERT INTO UnitsSold (product_id, purchase_DATE, units) VALUES ('2', '2019-03-22', '30');
+
+--------------
+-- SOLUCIÓN --
+--------------
+
