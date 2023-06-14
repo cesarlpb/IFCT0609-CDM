@@ -9,3 +9,13 @@ Escriba una consulta SQL para encontrar el porcentaje de pedidos inmediatos en l
 
 El formato del resultado de la consulta está en el siguiente ejemplo.
 */
+
+CREATE TABLE IF NOT EXISTS Delivery (delivery_id INT, customer_id INT, order_DATE DATE, customer_pref_delivery_DATE DATE);
+TRUNCATE TABLE Delivery;
+INSERT INTO Delivery (delivery_id, customer_id, order_DATE, customer_pref_delivery_DATE) VALUES ('1', '1', '2019-08-01', '2019-08-02');
+INSERT INTO Delivery (delivery_id, customer_id, order_DATE, customer_pref_delivery_DATE) VALUES ('2', '2', '2019-08-02', '2019-08-02');
+INSERT INTO Delivery (delivery_id, customer_id, order_DATE, customer_pref_delivery_DATE) VALUES ('3', '1', '2019-08-11', '2019-08-12');
+INSERT INTO Delivery (delivery_id, customer_id, order_DATE, customer_pref_delivery_DATE) VALUES ('4', '3', '2019-08-24', '2019-08-24');
+INSERT INTO Delivery (delivery_id, customer_id, order_DATE, customer_pref_delivery_DATE) VALUES ('5', '3', '2019-08-21', '2019-08-22');
+INSERT INTO Delivery (delivery_id, customer_id, order_DATE, customer_pref_delivery_DATE) VALUES ('6', '2', '2019-08-11', '2019-08-13');
+INSERT INTO Delivery (delivery_id, customer_id, order_DATE, customer_pref_delivery_DATE) VALUES ('7', '4', '2019-08-09', '2019-08-09');

@@ -5,3 +5,11 @@ Escriba una consulta SQL para informar de la fracción de jugadores que volviero
 
 El formato del resultado de la consulta está en el siguiente ejemplo.
 */
+
+CREATE TABLE IF NOT EXISTS Activity2 (player_id INT, device_id INT, event_DATE DATE, games_played INT);
+TRUNCATE TABLE Activity2;
+INSERT INTO Activity2 (player_id, device_id, event_DATE, games_played) VALUES ('1', '2', '2016-03-01', '5');
+INSERT INTO Activity2 (player_id, device_id, event_DATE, games_played) VALUES ('1', '2', '2016-03-02', '6');
+INSERT INTO Activity2 (player_id, device_id, event_DATE, games_played) VALUES ('2', '3', '2017-06-25', '1');
+INSERT INTO Activity2 (player_id, device_id, event_DATE, games_played) VALUES ('3', '1', '2016-03-02', '0');
+INSERT INTO Activity2 (player_id, device_id, event_DATE, games_played) VALUES ('3', '4', '2018-07-03', '5');
