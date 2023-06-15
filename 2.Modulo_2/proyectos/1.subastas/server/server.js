@@ -13,8 +13,16 @@ const selectQuery = "SELECT * From Subastas;"
 
 con.connect(function(err) {
   if (err) throw err;
+  const allowedIP = ['127.0.0.1', '::1']; // Dirección IP permitida (cambia según tu configuración)
   http.createServer(function(req, res){
-    if(req.url == "/subastas"){
+    // Obtener la dirección IP del cliente desde la solicitud
+    const clientIP = req.socket.remoteAddress;
+    console.log(clientIP)
+    // Establecer las cabeceras CORS
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    if(req.url == "/subastas" && allowedIP.includes(clientIP)){
       con.query(selectQuery, function (err, result) {
         if (err) throw err;
         res.writeHead(200, {"Content-Type": "application/json; charset = UTF-8"})
