@@ -4,10 +4,18 @@
 const fs = require('fs');
   
 // Leemos el archivo de prueba:
-fs.readFile('1.txt', 'utf8', function(err, data){
-    let objArr = limpiarTxt(data)
-    let json = str2json(objArr)
-    console.log(JSON.stringify(json, null, 2)) // ok
+fs.readFile('data.txt', 'utf8', function(err, data){
+    let jsonArr = []
+    let dataArr = data.split("---")
+    // Ignoramos primer y último elementos del arr porque son ""
+    for(let i = 1; i<dataArr.length-1; i++){
+        let objArr = limpiarTxt(dataArr[i])
+        let json = str2json(objArr)
+        if(Object.keys(json).length > 0){
+            jsonArr.push(json)
+        }
+    }
+    console.log(jsonArr)
 });
 
 function limpiarTxt(data){
