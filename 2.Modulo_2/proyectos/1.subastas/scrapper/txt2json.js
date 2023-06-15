@@ -15,7 +15,13 @@ fs.readFile('data.txt', 'utf8', function(err, data){
             jsonArr.push(json)
         }
     }
-    console.log(jsonArr)
+    fs.writeFile("data.json", JSON.stringify(jsonArr, null, 2), (err) => {
+        if (err)
+          console.log(err);
+        else {
+          console.log("Archivo 'data.json' creado\n");
+        }
+      });
 });
 
 function limpiarTxt(data){
