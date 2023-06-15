@@ -12,6 +12,12 @@ fs.readFile('2.txt', 'utf8', function(err, data){
             objArr.push(item.trim())
         }
     })
+    
+    let json = str2json(objArr)
+    console.log(JSON.stringify(json, null, 2)) // ok
+});
+
+function str2json(objArr){
     // Creamos el JSON
     let json = {}
     // subastaId
@@ -35,5 +41,5 @@ fs.readFile('2.txt', 'utf8', function(err, data){
     json["estado"] = estado;
     json["descripcion"] = descripcion;
 
-    console.log(JSON.stringify(json, null, 2)) // ok
-});
+    return json;
+}
