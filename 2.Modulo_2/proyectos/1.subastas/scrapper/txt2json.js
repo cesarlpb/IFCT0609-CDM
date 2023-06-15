@@ -4,7 +4,13 @@
 const fs = require('fs');
   
 // Leemos el archivo de prueba:
-fs.readFile('2.txt', 'utf8', function(err, data){
+fs.readFile('1.txt', 'utf8', function(err, data){
+    let objArr = limpiarTxt(data)
+    let json = str2json(objArr)
+    console.log(JSON.stringify(json, null, 2)) // ok
+});
+
+function limpiarTxt(data){
     let dataArr = data.replaceAll("\r", "").replaceAll("---", "").split("\n")
     let objArr = []
     dataArr.forEach(item => {
@@ -12,11 +18,8 @@ fs.readFile('2.txt', 'utf8', function(err, data){
             objArr.push(item.trim())
         }
     })
-    
-    let json = str2json(objArr)
-    console.log(JSON.stringify(json, null, 2)) // ok
-});
-
+    return objArr;
+}
 function str2json(objArr){
     // Creamos el JSON
     let json = {}
