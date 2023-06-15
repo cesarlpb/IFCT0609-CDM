@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS Subastas (
   ubicacion VARCHAR(255) NOT NULL , 
   expedienteId VARCHAR(255) NOT NULL , 
   estado VARCHAR(255) NOT NULL , 
-  descripcion VARCHAR(65535) NULL , 
+  descripcion MEDIUMTEXT NULL , 
   PRIMARY KEY (subastasId)) ENGINE = InnoDB;
 `;
 
