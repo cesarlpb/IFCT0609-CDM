@@ -41,7 +41,10 @@ Todas las preguntas se responden en base a esta tabla [tblUsuarios](./tblusuario
 ```
 
 ### Node
-1. `GET` de lista: todos los usuarios de la tabla. Se devuelven 10 usuarios a la vez. Ordenados por id creciente. Todas las columnas.
+1. `GET` de lista: todos los usuarios de la tabla. Se devuelven 10 usuarios a la vez. Ordenados por id creciente. Todas las columnas. Si no hay usuarios, array vacío.
+```sql
+  SELECT * FROM tblUsuarios;
+```
 2. `GET` de un objeto: se indica el id. Todas las columnas. En caso de que no exista ese id, objeto vacío.
 3. `POST` de un usuario por id. Recibimos todas la columnas y creamos usuario. Si falta alguna columna que no sea el id -> `Bad request`.
 4. `PUT` por id para editar un campo. Si no existe el id, error. Se admite objeto parcial, es decir, que no me pasen todas las columnas. El campo que me indican debe existir, sino, `Bad Request`. 
