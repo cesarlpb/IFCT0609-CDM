@@ -18,6 +18,8 @@ CREATE TABLE IF NOT EXISTS Subastas (
   PRIMARY KEY (subastasId)) ENGINE = InnoDB;
 `;
 
+const filename = "19-6-2023-15-46-43" // Cambiar nombre de archivo para cargar datos en tabla
+
 con.connect(function(err) {
   if (err) throw err;
   // Crear tabla si no existe
@@ -25,7 +27,7 @@ con.connect(function(err) {
     if (err) throw err;
     console.log("Tabla Subastas creada")
   });
-  fs.readFile('data.json', 'utf8', function(err, data){
+  fs.readFile(filename + ".json", 'utf8', function(err, data){
     if (err) throw err;
     console.log(data)
     let arr = JSON.parse(data) // Transformamos texto en objeto JSON
