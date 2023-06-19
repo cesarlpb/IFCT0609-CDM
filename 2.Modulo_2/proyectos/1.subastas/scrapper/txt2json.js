@@ -2,9 +2,10 @@
 
 // Script que lee un txt y devuelve un JSON  
 const fs = require('fs');
-  
+const filename = "19-6-2023-15-46-43" // Cambiar nombre al archivo que queremos pasar a JSON
+
 // Leemos el archivo de prueba:
-fs.readFile('data.txt', 'utf8', function(err, data){
+fs.readFile(filename + '.txt', 'utf8', function(err, data){
     let jsonArr = []
     let dataArr = data.split("---")
     // Ignoramos primer y último elementos del arr porque son ""
@@ -15,11 +16,11 @@ fs.readFile('data.txt', 'utf8', function(err, data){
             jsonArr.push(json)
         }
     }
-    fs.writeFile("data.json", JSON.stringify(jsonArr, null, 2), (err) => {
+    fs.writeFile(filename + ".json", JSON.stringify(jsonArr, null, 2), (err) => {
         if (err)
           console.log(err);
         else {
-          console.log("Archivo 'data.json' creado\n");
+          console.log(`Archivo '${filename}.json' creado\n`);
         }
       });
 });
