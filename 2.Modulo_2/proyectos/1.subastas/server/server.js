@@ -17,7 +17,7 @@ con.connect(function(err) {
   http.createServer(function(req, res){
     // Obtener la dirección IP del cliente desde la solicitud
     const clientIP = req.socket.remoteAddress;
-    console.log(clientIP)
+    // console.log(clientIP) // ::1 -> localhost o 127.0.0.1
     // Establecer las cabeceras CORS
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET');
