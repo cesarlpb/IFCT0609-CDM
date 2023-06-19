@@ -1,5 +1,5 @@
 ## SuperChatGPT
-Cambios en repositorio de [SuperChatGPT](https://github.com/cesarlpb/SuperChatGPT)
+Cambios en repositorio de [SuperChatGPT](https://github.com/cesarlpb/SuperChatGPT). Trabajamos en la [rama Node](https://github.com/cesarlpb/SuperChatGPT/tree/node).
 
 Nuevos features:
 
