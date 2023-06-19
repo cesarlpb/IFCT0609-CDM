@@ -1,3 +1,4 @@
+-- Active: 1686076236522@@127.0.0.1@3306@pruebas
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
@@ -27,7 +28,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `tblusuarios`
 --
 
-CREATE TABLE `tblusuarios` (
+CREATE TABLE IF NOT EXISTS `tblUsuarios` (
   `idx` int(11) NOT NULL,
   `usuario` varchar(20) DEFAULT NULL,
   `nombre` varchar(20) DEFAULT NULL,
@@ -91,4 +92,4 @@ COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */; 
