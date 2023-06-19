@@ -19,3 +19,7 @@ Repositorio de la formación IFCT0609 en CDM
   3. Selecionar carpeta, en Windows suele ser `C://Xampp`
   4. Instalar y abrir programa 
   5. Para iniciar haced click en `Start` para Apache y MySQL. Si aparecen en verde, podemos abrir localhost haciendo click en `Admin`
+
+## Configuración de IP estática
+
+![IP estática](./diagramas/ip.png)
