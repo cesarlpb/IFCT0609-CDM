@@ -1,6 +1,12 @@
 // Referencia: https://ifgeekthen.nttdata.com/es/web-scraping-con-javascript-y-nodejs
 const puppeteer = require('puppeteer');
 const jsdom = require('jsdom');
+const fs = require('fs');
+
+function crearFilename(){
+  let date = new Date()
+  return fechaHora = date.toLocaleString().replaceAll("/", "-").replace(", ", "-").replaceAll(":", "-")
+}
 
 (async () => {
   try {
@@ -13,9 +19,23 @@ const jsdom = require('jsdom');
     // Creamos una instancia del resultado devuelto por puppeter para parsearlo con jsdom
     const { window: { document } } = new jsdom.JSDOM(body);
 
+    let text = ""
     // Seleccionamos los títulos y lo mostramos en consola
     document.querySelectorAll('.resultado-busqueda')
-      .forEach(element => console.log(element.textContent + "\n\n---\n\n"));
+      .forEach(element => 
+        {
+          text += element.textContent + "\n\n---\n\n"
+        });
+    let filename = crearFilename() // sin extensión
+    fs.writeFile(filename + ".txt", text, (err) => {
+      if (err)
+        console.log(err);
+      else {
+        console.log(`Archivo ${filename + ".txt"} creado\n`);
+      }
+    });
+    // Confirmamos que hemos recibido datos y que el archivo se ha creado:
+    console.log(text)
 
     // Cerramos el puppeteer
     await browser.close();
