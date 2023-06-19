@@ -5,6 +5,10 @@ Todas las preguntas se responden en base a esta tabla [tblUsuarios](./tblusuario
 ### SQL
 1. Selección de preguntas de bloques 1 al 4 de SQL
 
+- Bloque 1: 2, 4, 6, 12, 
+- Bloque 2: 16, 18, 19, 21, 23, 
+- Bloque 3: 28, 38, 
+- Bloque 4: 39, 40, 42, 43
 
 ### Node
 1. `GET` de lista: todos los usuarios de la tabla. Se devuelven 10 usuarios a la vez. Ordenados por id creciente. Todas las columnas.
