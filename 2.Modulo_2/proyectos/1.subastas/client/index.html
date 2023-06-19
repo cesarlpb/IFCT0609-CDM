@@ -12,6 +12,9 @@
     let endpointUrl = "http://localhost:8080/subastas";
     fetch(endpointUrl, {
       method: 'GET',
+      headers: new Headers({
+      'Content-Type': 'application/json',
+    }),
       mode: 'cors',
     }).then(function (response) {
       // La llamada a la API fue exitosa
@@ -24,7 +27,9 @@
       console.warn('Algo salió mal.', err);
     });
     alert("Abre la consola para ver los datos")
-    // [ x ]TODO: resolver el problema con fetch(...)
-    // TODO: crear el bucle para hacer la tabla
+    /*
+    * [ x ]TODO: resolver el problema con fetch(...)
+    * TODO: crear el bucle para hacer la tabla
+    */
   </script>
 </html>
