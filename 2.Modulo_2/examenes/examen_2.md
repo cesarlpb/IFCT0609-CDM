@@ -50,5 +50,8 @@ Todas las preguntas se responden en base a esta tabla [tblUsuarios](./tblusuario
   SELECT * FROM tblUsuarios WHERE id = ?;
 ```
 3. `POST` de un usuario por id. Recibimos todas la columnas y creamos usuario. Si falta alguna columna que no sea el id -> `Bad request`.
+```sql
+  INSERT INTO tblUsuario ?, ?, ? VALUES( ?, ?, ? ) WHERE idx = ?;
+```
 4. `PUT` por id para editar un campo. Si no existe el id, error. Se admite objeto parcial, es decir, que no me pasen todas las columnas. El campo que me indican debe existir, sino, `Bad Request`. 
 5. `DELETE` por id: me indican un id y si existe se borra. En caso de borrarlo, devolvemos confirmación de que se ha borrado `"El id 1 ha sido borrado"`. Si no existe el id, se devuelve objeto vacío. Si el id no es un id válido, `Bad Request`.
