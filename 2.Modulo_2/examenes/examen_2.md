@@ -1,5 +1,7 @@
 ## Preguntas
 
+[Modelos de examen 2/3 del Módulo 2](https://drive.google.com/drive/folders/1vvCbqxHlhceTb6TF8WdV5Iu_I2BvR6wZ?usp=sharing)
+
 Todas las preguntas se responden en base a esta tabla [tblUsuarios](./tblusuarios.sql)
 
 ### SQL
