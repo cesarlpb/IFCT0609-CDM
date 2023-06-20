@@ -67,5 +67,11 @@ con.connect(function(err) {
       res.writeHead(400)
       res.end("Bad Request")
     }
-  }).listen(8080, () => { console.log("http://localhost:8080")});
+  }).listen(8080, () => { 
+    console.log("GET de lista: http://localhost:8080/usuarios")
+    console.log("GET por id: http://localhost:8080/usuarios/1")
+    console.log("POST por id: http://localhost:8080/usuarios")
+    console.log("PUT por id: http://localhost:8080/usuarios/1")
+    console.log("DELETE por id: http://localhost:8080/usuarios/1")
+  });
 });
