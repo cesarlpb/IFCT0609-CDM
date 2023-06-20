@@ -35,7 +35,7 @@ con.connect(function(err) {
         res.writeHead(200, {"Content-type" : "application/json; charset = UTF-8;"})
         res.end(JSON.stringify(result, null, 2))
       })
-    }else if(req.url.startsWith("/usuarios/") && id && req.method == "POST"){
+    }else if(req.url.startsWith("/usuarios") && !id && req.method == "POST"){
       let jsonString = ""
       req.on('data', function (data) {
         jsonString += data;
@@ -63,7 +63,12 @@ con.connect(function(err) {
             res.end()
           })
         })
-    }else{
+    }else if(req.method == "PUT"){
+      res.end("PUT")
+    }else if(req.method == "DELETE"){
+      res.end("DELETE")
+    }
+    else{
       res.writeHead(400)
       res.end("Bad Request")
     }
