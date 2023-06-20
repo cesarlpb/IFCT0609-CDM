@@ -64,9 +64,9 @@ con.connect(function(err) {
           })
         })
     }else if(req.method == "PUT"){
-      res.end("PUT")
+      res.end("PUT. Coming soon in best repos.🐱‍👤")
     }else if(req.method == "DELETE"){
-      res.end("DELETE")
+      res.end("DELETE. Coming soon in best repos.🐱‍👤")
     }
     else{
       res.writeHead(400)
@@ -76,7 +76,7 @@ con.connect(function(err) {
     console.log("GET de lista: http://localhost:8080/usuarios")
     console.log("GET por id: http://localhost:8080/usuarios/1")
     console.log("POST por id: http://localhost:8080/usuarios")
-    console.log("PUT por id: http://localhost:8080/usuarios/1")
-    console.log("DELETE por id: http://localhost:8080/usuarios/1")
+    // console.log("PUT por id: http://localhost:8080/usuarios/1")
+    // console.log("DELETE por id: http://localhost:8080/usuarios/1")
   });
 });
