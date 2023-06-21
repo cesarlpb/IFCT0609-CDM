@@ -1,5 +1,12 @@
 ## Preguntas
 
+**Antes de entregar:**
+
+  [ ] Archivo(s) con formato de nombre `nombre_apellidos.js` comprimidos en ZIP. Comprimir online en https://www.files2zip.es/
+  [ ] Poned nombre en el examen en papel
+  [ ] [¿El código funciona?](meme.webp)
+
+[Formulario de entrega](https://forms.gle/n576ZVophFTAS2ZP6)
 [Modelos de examen 2/3 del Módulo 2](https://drive.google.com/drive/folders/1vvCbqxHlhceTb6TF8WdV5Iu_I2BvR6wZ?usp=sharing)
 
 Todas las preguntas se responden en base a esta tabla [tblUsuarios](./tblusuarios.sql)
