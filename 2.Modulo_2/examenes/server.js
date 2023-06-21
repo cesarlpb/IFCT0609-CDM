@@ -5,7 +5,7 @@ const con = mysql.createConnection({
   host : "localhost",
   user : "root",
   password : "",
-  database : "examen" // <-- colocad la db correcta
+  database : "db" // <-- colocad la db correcta
 });
 
 // Queries
@@ -64,8 +64,10 @@ con.connect(function(err) {
           })
         })
     }else if(req.method == "PUT"){
+      // --- No entra en el examen del 21-06: ---
       res.end("PUT. Coming soon in best repos.🐱‍👤")
     }else if(req.method == "DELETE"){
+      // --- No entra en el examen del 21-06: ---
       res.end("DELETE. Coming soon in best repos.🐱‍👤")
     }
     else{
@@ -76,6 +78,7 @@ con.connect(function(err) {
     console.log("GET de lista: http://localhost:8080/usuarios")
     console.log("GET por id: http://localhost:8080/usuarios/1")
     console.log("POST por id: http://localhost:8080/usuarios")
+    // --- No entra en el examen del 21-06: ---
     // console.log("PUT por id: http://localhost:8080/usuarios/1")
     // console.log("DELETE por id: http://localhost:8080/usuarios/1")
   });
