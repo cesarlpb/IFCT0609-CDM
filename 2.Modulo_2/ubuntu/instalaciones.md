@@ -35,4 +35,5 @@ Para comprobar que funcionó, cuando termine:
 ```
 wsl -l -v
 ``` 
-[Más información](https://learn.microsoft.com/es-es/windows/wsl/compare-versions)
+[Más información](https://learn.microsoft.com/es-es/windows/wsl/compare-versions)<br>
+[Más sobre WSL](https://terminaldelinux.com/terminal/wsl/instalacion-wsl/)
