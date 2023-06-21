@@ -12,3 +12,6 @@ En caso de que el WSL no este activado abrimos las `Características de Windows`
 ![Alt text](3.png)
 4. Aceptar
 Para que se habilite la configuración **hay que reiniciar**. [Más info](https://windows.atsit.in/es/6557)
+---
+## Extensión de WSL para VS Code
+Id: ms-vscode-remote.remote-wsl
