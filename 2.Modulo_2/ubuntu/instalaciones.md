@@ -5,7 +5,7 @@
 3. Abrir y la primera vez tarda un rato en configurar:
 ![Alt text](1.png)
 ---
-En caso de que el WSL no este activado:
+En caso de que el WSL no este activado abrimos las `Características de Windows` y:
 - Marcamos Subsistema de Linux para Windows
 ![Alt text](2.png)
 - Marcamos plataforma de máquinas virtuales:
