@@ -23,4 +23,16 @@ Id: `ms-vscode-remote.remote-ssh`
 ```
   wsl --set-version Ubuntu-22.04 2
 ```
+Si nos sale el aviso de actualizar kernel, vamos a la [documentación](https://learn.microsoft.com/es-es/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package) y bajamos la actualización. 
+
+![Alt text](wsl-2.png)
+
+- Volvemos a ejecutar el comando `wsl --set-version Ubuntu-22.04 2`
+
+... tarda minutos en terminar este update ...
+
+Para comprobar que funcionó, cuando termine:
+```
+wsl -l -v
+``` 
 [Más información](https://learn.microsoft.com/es-es/windows/wsl/compare-versions)
