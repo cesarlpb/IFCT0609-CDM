@@ -14,4 +14,13 @@ En caso de que el WSL no este activado abrimos las `Características de Windows`
 Para que se habilite la configuración **hay que reiniciar**. [Más info](https://windows.atsit.in/es/6557)
 ---
 ## Extensión de WSL para VS Code
-Id: ms-vscode-remote.remote-wsl
+Id: `ms-vscode-remote.remote-wsl`
+![Alt text](wsl.png)
+## Remote SSH
+Id: `ms-vscode-remote.remote-ssh`
+![Alt text](remote-ssh.png)
+## Cambiar WSL 1 a WSL 2
+```
+  wsl --set-version Ubuntu-22.04 2
+```
+[Más información](https://learn.microsoft.com/es-es/windows/wsl/compare-versions)
