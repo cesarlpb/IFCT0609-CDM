@@ -11,6 +11,14 @@ Clase Car:
     }
   }
 ```
+### constructor
+Es un método especial que se ejecuta una sola vez en el momento de creación del objeto de la clase, se usa para:
+- inicializar valores
+- ejecutar acciones necesarias para crear el objeto
+- debe llamarse exactamente `constructor`
+
+--- 
+
 Creamos objetos de la clase Car:
 ```javascript
 let car1 = new Car() 
