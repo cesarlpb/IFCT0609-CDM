@@ -37,3 +37,5 @@ wsl -l -v
 ``` 
 [Más información](https://learn.microsoft.com/es-es/windows/wsl/compare-versions)<br>
 [Más sobre WSL](https://terminaldelinux.com/terminal/wsl/instalacion-wsl/)
+
+[MySQL en WSL](https://pen-y-fan.github.io/2021/08/08/How-to-install-MySQL-on-WSL-2-Ubuntu/)
