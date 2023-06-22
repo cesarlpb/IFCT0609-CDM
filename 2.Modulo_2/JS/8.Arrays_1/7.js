@@ -10,6 +10,7 @@ Si una letra es una vocal, la función tiene como único parámetro la letra que
 Solo se aceptan letras internacionales (sin acentos)
 */
 
+// Parte 1
 function separarPorGuiones(arr){
   let str = ""
   for(let i = 0; i<arr.length; i++){
@@ -21,3 +22,17 @@ let arr = [1, 2, 3]
 let str = separarPorGuiones(arr)
 console.log(str)
 
+// Parte 2
+function esVocal(letra){
+  const vocales = ["a", "e", "i", "o", "u"]
+  if(vocales.includes(letra.toLowerCase())){
+    return true
+  }
+  return false
+}
+let letra = "a"
+console.log(letra, "Es vocal? " + esVocal(letra)) // true
+letra = "z"
+console.log(letra, "Es vocal? " + esVocal(letra)) // false
+letra = "E"
+console.log(letra, "Es vocal? " + esVocal(letra)) // true
