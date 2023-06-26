@@ -54,8 +54,9 @@ class Bus{
     }
   }
   asignarConductor(conductor_){
-    // TODO: verificar que el dato que me pasan es un obj Conductor
-    this.conductor = conductor_
+    if (conductor_ instanceof Conductor){
+      this.conductor = conductor_
+    }
   }
 }
 let bus = new Bus()
@@ -63,3 +64,6 @@ bus.subir(10) // bus.pasajeros -> 10
 bus.bajar(1)  // bus.pasajeros -> 9
 bus.bajar(10) // bus.pasajeros -> 9
 bus.asignarConductor(new Conductor("Pepa", "123")) // bus.conductor -> Pepa
+// Comprobamos la validación de conductor:
+bus.asignarConductor("Pepo") // bus.conductor no cambia -> "Pepa"
+bus.asignarConductor(new Conductor("Pepo", "0192")) // bus.conductor sí cambia -> "Pepo"
