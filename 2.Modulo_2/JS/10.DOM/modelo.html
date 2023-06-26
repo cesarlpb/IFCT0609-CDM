@@ -105,8 +105,10 @@ function borrarDiv(){
   let el = document.getElementById("subtitulo");
   el.remove() // borra el elemento
 }
-function ponerPie(fig){
-
+function ponerPie(figure){
+  let img = figure.querySelector("img")
+  let alt = img.attributes.alt.value
+  console.log(alt)
 }
 function fuentesImg(){
 
