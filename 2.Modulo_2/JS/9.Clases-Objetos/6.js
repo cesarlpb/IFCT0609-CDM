@@ -21,3 +21,45 @@ Al crear el objeto Bus se asigna también el Conductor.+
 
 No pueden subir más pasajeros que los máximos admitidos y no pueden bajar más de los que hay.
 */
+
+class Conductor{
+  constructor(
+    nombre_ = "", 
+    licencia_ = ""
+    )
+    {
+      this.nombre = nombre_
+      this.licencia = licencia_
+    }
+  //
+}
+class Bus{
+  constructor(
+    capacidad_ = 50,
+    pasajeros_ = 0,
+    conductor_ = new Conductor("Pepe", "123")
+  ){
+    this.capacidad = capacidad_
+    this.pasajeros = pasajeros_
+    this.conductor = conductor_ 
+  }
+  subir(personas){
+    if(personas + this.pasajeros <= this.capacidad){
+      this.pasajeros += personas
+    }
+  }
+  bajar(personas){
+    if(personas <= this.pasajeros){
+      this.pasajeros -= personas
+    }
+  }
+  asignarConductor(conductor_){
+    // TODO: verificar que el dato que me pasan es un obj Conductor
+    this.conductor = conductor_
+  }
+}
+let bus = new Bus()
+bus.subir(10) // bus.pasajeros -> 10
+bus.bajar(1)  // bus.pasajeros -> 9
+bus.bajar(10) // bus.pasajeros -> 9
+bus.asignarConductor(new Conductor("Pepa", "123")) // bus.conductor -> Pepa
