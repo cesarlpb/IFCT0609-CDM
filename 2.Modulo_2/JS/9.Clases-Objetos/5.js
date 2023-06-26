@@ -11,7 +11,34 @@ anotar: anota los kilómetros
 media: calcula la media de kilómetros recorridos
 */
 class Ficha{
-  // constructor
-  // método anotar
-  // método media
+  constructor(
+    nombre_ = "", 
+    sesionesKm_ = [], 
+    numSesiones_ = 0)
+    {
+      this.nombre = nombre_
+      this.sesionesKm = sesionesKm_
+      this.numSesiones = numSesiones_
+    }
+  anotar(km){
+    if(!isNaN(km)){
+      this.sesionesKm.push(km)
+      this.numSesiones++
+    }
+  }
+  media(){
+    let suma = 0
+    for(let i = 0; i<this.sesionesKm.length; i++){
+      suma += this.sesionesKm[i]
+    }
+    if(this.numSesiones != 0){
+      return suma / this.numSesiones
+    }else{
+      return 0
+    }
+  }
 }
+let ficha = new Ficha("Pepe")
+ficha.anotar(1)
+ficha.anotar(3)
+ficha.media() // 2
