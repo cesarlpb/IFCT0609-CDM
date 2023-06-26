@@ -13,3 +13,41 @@ imprimir(): imprime los datos de la factura
 
 Para probar crea tres clientes y al menos una factura.
 */
+
+class Cliente{
+  constructor(
+    id_ = 0,
+    nombre_ = "",
+    email_ = "",
+    telefono_ = ""
+  ){
+    this.id = id_ 
+    this.nombre = nombre_
+    this.email = email_
+    this.telefono = telefono_
+  }
+}
+class Factura{
+  constructor(
+    idCliente_ = 0,
+    total_ = 0,
+    estado_ = "pendiente"
+    )
+  {
+    this.idCliente = idCliente_
+    this.total = total_
+    this.estado = estado_  
+  }
+  cobrar(){
+    this.estado = "pagada"
+  }
+  imprimir(){
+    console.log(`
+      Detalles de la Factura:
+      Id: ${this.idCliente}, 
+      Importe total: ${this.total.toFixed(2)} €,
+      Estado: ${this.estado}
+      `
+    )
+  }
+}
