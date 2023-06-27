@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script> 
+  // Este evento espera a que toda la página cargue
+    window.addEventListener("load", (event) => {
+      console.log("La página ha cargado");
+      // Aunque está varias líneas antes del input de precio, si conseguimos seleccionar el input
+      let el = document.getElementById("precio")
+      console.log(el)
+      
+      // Ejercicio 4
+      ej4()
+  });
+  </script>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos</title>
@@ -43,8 +56,23 @@
       <input id="total" readonly disabled>
     </form>
 
+   <!-- Ejercicio 4 -->
+   <h2>Ejercicio 4</h2>             
+    <div style="display: block; width: 100px; height: 100px;" class="borde" id="cuadro">
+      Cuadro que cambia al entrar el ratón            
+    </div>
+
   <script src="./1.js"></script>
   <script src="./2.js"></script>
   <script src="./3.js"></script>
+  <script src="./4.js"></script>
+  <script>
+  // Este evento sucede antes del de "load" y también nos permite acceder a elementos del DOM
+  window.addEventListener("DOMContentLoaded", (event) => {
+    console.log("El DOM está disponible");
+    let el = document.getElementById("precio")
+    console.log(el)
+  });
+  </script>
 </body>
 </html>
