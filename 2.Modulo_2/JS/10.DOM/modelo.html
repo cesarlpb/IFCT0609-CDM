@@ -53,6 +53,9 @@
 <header>
   <h1 id="titular" onclick="togleClase()">Hola Mundo</h1>
 </header>
+
+  <!-- Aquí añadimos el div de intercalar() -->
+
   <div id="subtitulo" style="text-align:center">Página de muestra de Javascript DHTML</div>
 
   <!-- Ej 3 de crear div -->
@@ -149,10 +152,17 @@ function togleClase(){
     titular.classList.add("activo")
   }
 }
-// Ej 8 - Crear div con más elementos internos
+// Ej 8 - Crear div con más elementos internos: <strong>Texto</strong>
 function intercalar(){
-
+  let header = document.querySelector("header");
+  let div = document.createElement("div", );
+  div.setAttribute("id", "div-intercalado");
+  let strong = document.createElement("strong");
+  strong.innerText = "Página Modelo";
+  div.appendChild(strong);
+  header.insertAdjacentElement("afterend", div);
 }  
+
 function cambiaImg(){
 
 }
