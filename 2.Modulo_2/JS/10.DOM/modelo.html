@@ -105,6 +105,7 @@ function borrarDiv(){
   let el = document.getElementById("subtitulo");
   el.remove() // borra el elemento
 }
+// Ej 5 - Mostrar/ocultar figcaption
 function ponerPie(figure){
   // Alternativa: dejar el texto siempre en el figcaption y con click alternar visibilidad
   let img = figure.querySelector("img")
@@ -116,9 +117,29 @@ function ponerPie(figure){
     figcaption.innerText = ""
   }
 }
+// Ej 6 - Hacer lista de enlaces a imágenes
 function fuentesImg(){
-
+  let imgs = document.querySelectorAll("img")
+  let srcs = []
+  // Bucle para leer cada src en <img> y añadirlo a un array
+  for(let i = 0; i<imgs.length; i++){
+    let img = imgs[i]
+    let srcText = img.attributes.src.value
+    srcs.push(srcText)
+  }
+  // Creamos HTML para introducir en div#fuentes
+  let html ="<h2>Fuentes</h2>"
+  html += "<ul>"
+  // Bucle para escribir los <li> del <ul> 
+  for(let i = 0; i<srcs.length; i++){
+    html += `<li>${srcs[i]}</li>`
+  }
+  html += "</ul>"
+  // Seleccionamos el div#fuentes y le añadimos el HTML formateado
+  let fuentes = document.querySelector("#fuentes")
+  fuentes.innerHTML = html
 }    
+
 function togleClase(){
 
 }
