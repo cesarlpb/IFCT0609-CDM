@@ -106,9 +106,15 @@ function borrarDiv(){
   el.remove() // borra el elemento
 }
 function ponerPie(figure){
+  // Alternativa: dejar el texto siempre en el figcaption y con click alternar visibilidad
   let img = figure.querySelector("img")
   let alt = img.attributes.alt.value
-  console.log(alt)
+  let figcaption = figure.querySelector("figcaption")
+  if(figcaption.innerText == ""){
+    figcaption.innerText = alt
+  }else{
+    figcaption.innerText = ""
+  }
 }
 function fuentesImg(){
 
