@@ -139,9 +139,15 @@ function fuentesImg(){
   let fuentes = document.querySelector("#fuentes")
   fuentes.innerHTML = html
 }    
-
+// Ej 7 - Colocar/quitar (toggle) clase activo con click
 function togleClase(){
-
+  let titular = document.querySelector("#titular")
+  let clases = titular.classList // array
+  if(clases.contains("activo")){
+    titular.classList.remove("activo")
+  }else{
+    titular.classList.add("activo")
+  }
 }
 function intercalar(){
 
