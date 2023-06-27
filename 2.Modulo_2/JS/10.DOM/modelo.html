@@ -76,7 +76,7 @@
     </figure>    
   </div>    
 <div id="fuentes"></div>
-<div  class="carrusel" data-img="0" onclick="cambiaImg()">
+<div class="carrusel" data-img="0" onclick="cambiaImg()">
     <img src="./uno.png" alt="Diapositivas" id="diapo">
 </div>    
 <!-- inicio de las funciones javascript pedidas en los ejercicios -->
@@ -163,9 +163,28 @@ function intercalar(){
   header.insertAdjacentElement("afterend", div);
 }  
 
+// Ej 9 - carousel que cambia img con click y resetea a la primera
 function cambiaImg(){
+  const srcs = ["./uno.png", "./dos.png", "./tres.png"]
 
+  let slider = document.querySelector(".carrusel"); // div > img
+  let img = slider.querySelector("img");
+  
+  // Buscamos el id del src actual en el array srcs
+  let srcActual = img.attributes.src.value // Hay que acceder al valor del src
+  let idx = srcs.findIndex(src => src == srcActual)
+  
+  // Bucle para incrementar el indice o resetearlo a 0
+  if(idx < srcs.length - 1){
+    idx++
+  }else{
+    idx = 0
+  }
+  
+  // Actualizamos el valor de src en img con la nueva imagen:
+  slider.querySelector("img").attributes.src.value = srcs[idx]
 }
+
 function toggle(){
 
 }
