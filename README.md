@@ -23,3 +23,7 @@ Repositorio de la formación IFCT0609 en CDM
 ## Configuración de IP estática
 
 ![IP estática](./diagramas/ip.png)
+
+## Otros repositorios
+
+- [Learn React](https://github.com/cesarlpb/learn-react)
