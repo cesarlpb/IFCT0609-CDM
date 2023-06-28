@@ -3,5 +3,12 @@ La página descrita con este código HTML posee dos bloques div cuyos atributos 
 */
 
 function ej6(){
-  
+  document.addEventListener("mousemove", (event) => {
+    console.log(event.pageX, event.pageY)
+    let cX = document.getElementById("cX")
+    cX.value = event.pageX
+    let cY = document.getElementById("cY")
+    cY.value = event.pageY
+  });
 }
+ej6()
