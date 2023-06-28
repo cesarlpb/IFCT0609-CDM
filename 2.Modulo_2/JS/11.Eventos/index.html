@@ -122,23 +122,32 @@
     <h2>Ejercicio 9</h2>
          
     <style>             
-      #boton{ 
+      .hidden{ 
         display:none; 
+      }
+      .boton-fijo{
+        position: fixed;
+        bottom:0;
+        display: block;
+        background-color: gray;
+        border: 1px solid black;
+        padding: 5px;
       }                 
     </style>              
                     
-    <div id="boton">
-      Boton
+    <div id="boton" class="hidden">
+      <a href="#" style="color:white; font-weight: bold; text-decoration: none;">Volver arriba</a>
     </div>                        
 
-  <!-- <script src="./1.js"></script>
+  <script src="./1.js"></script>
   <script src="./2.js"></script>
-  <script src="./3.js"></script> -->
+  <script src="./3.js"></script>
   <script src="./4.js"></script>
-  <!-- <script src="./5.js"></script>
+  <script src="./5.js"></script>
   <script src="./6.js"></script>
-  <script src="./7.js"></script> -->
+  <script src="./7.js"></script>
   <script src="./8.js"></script>
+  <script src="./9.js"></script>
   <script>
   // Este evento sucede antes del de "load" y también nos permite acceder a elementos del DOM
   window.addEventListener("DOMContentLoaded", (event) => {
