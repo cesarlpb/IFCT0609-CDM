@@ -87,21 +87,25 @@
       display: inline-block;
       width: 100px; 
       height:100px;
-      margin: 10px auto;
+      margin: 0;
+      padding: 0;
       border: 1px solid black;
     }
     </style>
-      
-    <div id="c1" style="background: red"></div>
-    <div id="c2" style="background: white"></div>
-    <div id="c3" style="background: blue"></div>
+    
+    <div id="fuera" style="border: 1px solid black; width: max-content; margin: 0 auto; padding: 0;height:101px;">
+      <div id="c1" style="background: red"></div>
+      <div id="c2" style="background: white"></div>
+      <div id="c3" style="background: blue"></div>
+    </div>
 
   <script src="./1.js"></script>
   <script src="./2.js"></script>
   <script src="./3.js"></script>
   <script src="./4.js"></script>
   <script src="./5.js"></script>
-  <script src="./6.js"></script>
+  <!-- <script src="./6.js"></script> -->
+  <script src="./7.js"></script>
   <script>
   // Este evento sucede antes del de "load" y también nos permite acceder a elementos del DOM
   window.addEventListener("DOMContentLoaded", (event) => {
