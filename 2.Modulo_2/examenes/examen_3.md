@@ -4,6 +4,8 @@ Examen del 11 de julio
 
 [Cuestionario](https://forms.gle/JVkZFTH3kYFPBqKX9)
 
+[Soluciones](https://github.com/cesarlpb/learn-react/releases/tag/zip-examen-3-cdm) de los ejercicios 1, 2 y 3 en repositorio [learn-react](https://github.com/cesarlpb/learn-react/tree/cdm)
+
 ## Preguntas de desarrollo
 
 1. Usando Node crea un endpoint que devuelva todos los registros de un objeto en formato JSON. Este endpoint debe devolver todos los elementos de una lista si no se recibe parámetro “id” y solo un objeto o el primero que encuentre en la lista si recibe id. ¿Cómo podríamos añadir un filtro a la lista para buscar por un campo de los objetos del array?
