@@ -2,7 +2,7 @@ Examen del 11 de julio
 
 ## Test 
 
-[Cuestionario](https://forms.gle/SceJmEQbTEFWuyqA7)
+[Cuestionario](https://forms.gle/JVkZFTH3kYFPBqKX9)
 
 ## Preguntas de desarrollo
 
