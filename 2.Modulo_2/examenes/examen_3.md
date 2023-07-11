@@ -1,10 +1,10 @@
 Examen del 11 de julio
 
 ## Test 
-[Formulario de entrega 11 julio](https://forms.gle/4s1u9rm44pBa3KSp6) <br>
-[Cuestionario](https://forms.gle/JVkZFTH3kYFPBqKX9)
-
-[Soluciones](https://github.com/cesarlpb/learn-react/releases/tag/zip-examen-3-cdm) de los ejercicios 1, 2 y 3 en repositorio [learn-react](https://github.com/cesarlpb/learn-react/tree/cdm)
+- [Plantilla para el examen del 11 de julio](https://drive.google.com/file/d/1TxP22BvYUImiN_ulUt05Gav_LLyhFYvX/view?usp=drive_link)
+- [Formulario de entrega 11 julio](https://forms.gle/4s1u9rm44pBa3KSp6)
+- [Cuestionario](https://forms.gle/JVkZFTH3kYFPBqKX9)
+- [Soluciones](https://github.com/cesarlpb/learn-react/releases/tag/zip-examen-3-cdm) de los ejercicios 1, 2 y 3 en repositorio [learn-react](https://github.com/cesarlpb/learn-react/tree/cdm)
 
 ## Preguntas de desarrollo
 
